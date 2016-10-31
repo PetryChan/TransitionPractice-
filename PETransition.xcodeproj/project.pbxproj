@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0848B39B1DC7338200973052 /* UIView+Snap.m in Sources */ = {isa = PBXBuildFile; fileRef = 0848B39A1DC7338200973052 /* UIView+Snap.m */; };
 		089FA29C1D84FCB900750D8F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 089FA29B1D84FCB900750D8F /* main.m */; };
 		089FA29F1D84FCB900750D8F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 089FA29E1D84FCB900750D8F /* AppDelegate.m */; };
 		089FA2A51D84FCB900750D8F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089FA2A31D84FCB900750D8F /* Main.storyboard */; };
@@ -50,6 +51,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0848B3991DC7338200973052 /* UIView+Snap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Snap.h"; sourceTree = "<group>"; };
+		0848B39A1DC7338200973052 /* UIView+Snap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Snap.m"; sourceTree = "<group>"; };
 		089FA2971D84FCB900750D8F /* PETransition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PETransition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089FA29B1D84FCB900750D8F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		089FA29D1D84FCB900750D8F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -250,6 +253,8 @@
 				089FA2E71D85087900750D8F /* UIView+FrameChange.m */,
 				089FA2E91D850ADD00750D8F /* UIView+anchorPoint.h */,
 				089FA2EA1D850ADD00750D8F /* UIView+anchorPoint.m */,
+				0848B3991DC7338200973052 /* UIView+Snap.h */,
+				0848B39A1DC7338200973052 /* UIView+Snap.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -336,7 +341,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = PE;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = iStorm;
 				TargetAttributes = {
 					089FA2961D84FCB900750D8F = {
@@ -406,6 +411,7 @@
 				089FA2EB1D850ADD00750D8F /* UIView+anchorPoint.m in Sources */,
 				089FA32C1D89031600750D8F /* PEPageTurningTransition.m in Sources */,
 				089FA2CC1D84FD4400750D8F /* MASCompositeConstraint.m in Sources */,
+				0848B39B1DC7338200973052 /* UIView+Snap.m in Sources */,
 				089FA2FA1D8534D700750D8F /* PEMagicMoveCell.m in Sources */,
 				089FA3231D87E5E300750D8F /* PEElasticTransition.m in Sources */,
 				089FA2D41D84FD4400750D8F /* View+MASAdditions.m in Sources */,
@@ -456,8 +462,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -501,8 +509,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -535,7 +545,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PETransition/PrefixHeader.pch";
 				INFOPLIST_FILE = PETransition/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iStorm.PETransition;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -552,7 +562,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PETransition/PrefixHeader.pch";
 				INFOPLIST_FILE = PETransition/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iStorm.PETransition;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -55,8 +55,11 @@
     UIViewController *fromVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     //对当前view截图 然后作为动画对象
-    UIView *tempV = [fromVC.view snapshotViewAfterScreenUpdates:NO];
+//    UIView *tempV = [fromVC.view snapshotViewAfterScreenUpdates:NO];
+    UIImage *image = [fromVC.view imageFromView];
+    UIView *tempV = [[UIImageView alloc] initWithImage:image];
     tempV.frame = fromVC.view.frame;
+    
     UIView *containerV = [transitionContext containerView];
     //临时的放最上面 做过渡
     [containerV addSubview:toVC.view];

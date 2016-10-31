@@ -61,8 +61,11 @@
     UIViewController *toVC = [transitionContent viewControllerForKey:UITransitionContextToViewControllerKey];
     UIViewController *fromVC = [transitionContent viewControllerForKey:UITransitionContextFromViewControllerKey];
     //snapshotViewAfterScreenUpdates:可以对某个试图截图,我们采用对这个截图做动画代替直接对toVC做动画,因为在手势过渡中直接使用toVC动画会和手势有冲突,如果不需要实现手势的话,就可以不是用截图了
-    UIView *tempView = [fromVC.view snapshotViewAfterScreenUpdates:NO];
+//    UIView *tempView = [fromVC.view snapshotViewAfterScreenUpdates:NO];
+    UIImage *image = [fromVC.view imageFromView];
+    UIView *tempView = [[UIImageView alloc] initWithImage:image];
     tempView.frame = fromVC.view.frame;
+    
     //因为对截图做动画,fromVC开始是隐藏的
     fromVC.view.hidden = YES;
     //containerView:如果要对视图做转场动画,视图就必须加入containerView中才能进行,可以理解为containerView管理所有做转场动画的视图

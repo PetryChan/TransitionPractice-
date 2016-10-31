@@ -66,7 +66,11 @@
     //拿到当前点击的cell的imageView
     PEMagicMoveCell *cell = (PEMagicMoveCell *)[fromVC.collectionView cellForItemAtIndexPath:fromVC.clickIndex];
     UIView *containerView = [transitionContext containerView];
-    UIView *tempView = [cell.imageV snapshotViewAfterScreenUpdates:NO];
+//    UIView *tempView = [cell.imageV snapshotViewAfterScreenUpdates:NO];
+    UIImage *image = [cell.imageV imageFromView];
+    UIView *tempView = [[UIImageView alloc] initWithImage:image];
+    tempView.frame = cell.imageV.frame;
+    
     //将点击的cell截图作为临时View的内容 并将坐标系转化成push控制器种的坐标
     tempView.frame = [cell.imageV convertRect:cell.imageV.bounds toView:containerView];
     //设置动画前的各个控件的状态
@@ -125,5 +129,6 @@
         }
     }];
 }
+
 
 @end
